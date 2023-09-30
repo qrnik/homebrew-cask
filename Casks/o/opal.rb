@@ -48,9 +48,9 @@ cask "opal" do
     "~/Library/Preferences/group.97Z3HJWCRT.com.opalcamera.Opal.plist",
   ]
 
-  caveats %{
+  caveats "
     New version of #{token} is available as 'opal-composer'
     You can install it by running 'brew install --cask opal-composer'
     For release notes, see https://opalcamera.com/opal-composer/download
-  }
+  "
 end
