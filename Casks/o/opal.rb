@@ -9,8 +9,8 @@ cask "opal" do
   homepage "https://faqs.opal.camera/download"
 
   livecheck do
-    url "https://opalcamera.com/download"
-    regex(/Opal\s+Build\s+(\d+(?:\.\d+)+)/i)
+    url "https://opalcamera.com/opal-composer/download"
+    regex(/Opal\s+Composer\s+(0\.\d+(?:\.\d+)?)/i)
   end
 
   depends_on macos: ">= :monterey"
@@ -47,4 +47,10 @@ cask "opal" do
     "~/Library/Preferences/com.opalcamera.OpalCamera.plist",
     "~/Library/Preferences/group.97Z3HJWCRT.com.opalcamera.Opal.plist",
   ]
+
+  caveats %{
+    New version of #{token} is available as 'opal-composer'
+    You can install it by running 'brew install --cask opal-composer'
+    For release notes, see https://opalcamera.com/opal-composer/download
+  }
 end
